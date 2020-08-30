@@ -50,9 +50,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.requiresChannel()
                 .requestMatchers(r -> r.getHeader("X-Forwarded-Proto") != null)
                 .requiresSecure();
-                http.cors().and()
-                .csrf().disable()
-                .sessionManagement()
+
+                http.sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()

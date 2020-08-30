@@ -8,7 +8,7 @@ import vladyslav.shuhai.psyhology.service.NewsletterService;
 
 import javax.validation.Valid;
 
-@CrossOrigin
+@CrossOrigin(origins = "https://psyhology-site.herokuapp.com/")
 @RestController
 @RequestMapping("/news")
 public class NewsletterController {
