@@ -8,7 +8,7 @@ import vladyslav.shuhai.psyhology.service.AdminService;
 
 import javax.validation.Valid;
 @RestController
-@CrossOrigin(origins = "https://psyhology-site.herokuapp.com/")
+@CrossOrigin
 @RequestMapping("/admin")
 public class AdminController {
     @Autowired

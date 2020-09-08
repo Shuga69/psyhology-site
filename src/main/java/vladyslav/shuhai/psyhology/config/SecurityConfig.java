@@ -47,12 +47,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected final void configure(final HttpSecurity http) throws Exception {
-        http.requiresChannel()
-                .requestMatchers(r -> r.getHeader("X-Forwarded-Proto") != null)
-                .requiresSecure();
-
-                http.sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+        http.cors().and()
+                .csrf().disable()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
                 .antMatchers(HttpMethod.POST, "/admin/register","/admin/login", "/upload","/files","/user/create","/news/subscribe")

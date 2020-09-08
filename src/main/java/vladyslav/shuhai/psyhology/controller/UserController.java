@@ -9,7 +9,7 @@ import vladyslav.shuhai.psyhology.service.UserService;
 
 import javax.validation.Valid;
 
-@CrossOrigin(origins = "https://psyhology-site.herokuapp.com/")
+@CrossOrigin
 @RestController
 @RequestMapping("/user")
 public class UserController {

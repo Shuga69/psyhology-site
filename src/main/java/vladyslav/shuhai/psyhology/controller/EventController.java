@@ -9,7 +9,7 @@ import vladyslav.shuhai.psyhology.service.EventService;
 import javax.validation.Valid;
 import java.util.List;
 
-@CrossOrigin(origins = "https://psyhology-site.herokuapp.com/")
+@CrossOrigin
 @RestController
 @RequestMapping("/adminPanel")
 public class EventController {
